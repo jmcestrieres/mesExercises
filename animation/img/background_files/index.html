@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://s0.2mdn.net/6835825/1561537996410/MES_piste_carton_728x90/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta https-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="ad.size" content="width=728,height=90">
+		<link href="./css" rel="stylesheet">
+		<link href="./css(1)" rel="stylesheet">
+		<link href="./css(2)" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
+		<style type="text/css">
+
+			html, body  { margin: 0; padding: 0; border: 0; text-decoration: none;
+				font-family: Arial, Helvetica, sans-serif; font-size:14px;}
+			a {text-decoration: none; }
+			a, img, img a { border: 0; }
+
+			#globalAd { 
+				width: 728px;
+				height: 90px;
+				position: relative;
+				border: 1px solid #000000;
+				background: #ffffff;
+				overflow: hidden;
+				z-index: 1;
+				box-sizing : border-box;
+				text-align:center;
+				cursor:pointer;
+				margin: 0 auto;
+			}
+			#screen1 { 
+				width: 220px;
+				height: 146px;
+				position: absolute;
+				top:50px;
+				left:60px;
+			}
+			
+			#screen1 img{ 
+				width: 100%;
+				height:100%;
+			}
+			
+			#screen2 { 
+				width: 220px;
+				height: 146px;
+				position: absolute;
+				top:50px;
+				left:60px;
+				transform-origin: left;
+				transition: all 1s ease;
+				-webkit-transform: perspective(500px);
+				-moz-transform: perspective(500px);
+			}
+			
+			#screen2 img{ 
+				width: 100%;
+				height:101%;
+			}
+			
+			#screen2.doorOpen{
+			  /*prespectiv creates the door open effect*/
+			  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(90deg);
+			  height:250px;
+			  left:0px;
+			  top:0px;
+			}
+			
+			
+			#fond{
+				position:absolute;
+				width: 728px;
+				height:90px;
+				top:0;
+				left :0px; 			
+				background:#4295d1;
+			}
+			
+			#mur{
+				position:absolute;
+				width: 728px;
+				height:90px;
+				top:0;
+				left :0px; 	
+				background:url(rectangle.png);
+			}
+			#lampe{
+				width: 728px;
+				height:auto;
+				position:absolute;
+				text-align:center;
+				left: -151px;
+    			top: 16px;
+			}
+			
+			
+			#text1{
+				width:100%;	
+				position:absolute;
+				top: 23px;
+    left: 55px;
+				text-align:center;
+				font-weight:800;
+				font-size:20px;
+				line-height:22px;
+				text-align:center;
+				color:#fff;
+				font-family: 'Raleway', sans-serif;
+			}
+			#dessous{
+				width:100%;	
+				position:absolute;
+				top: 20px;
+  				left: 85px;
+				text-align:center;
+				font-weight:800;
+				font-size:20px;
+				line-height:22px;
+				text-align:center;
+				color:#fff;
+				font-family: 'Raleway', sans-serif;
+			}
+			
+			
+			
+			#prise_f{
+				position:absolute;
+				width:auto;
+				height:auto;
+				left: 624px;
+    transform: translateX(-50%);
+    top: 10px;
+			}
+			#prise_m{
+				position:absolute;
+				width:auto;
+				height:auto;
+				left: 626px;
+    transform: translateX(-49%) scale(1);
+    top: 28px;
+			}
+
+			#left {
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: white;
+				height: 90px;
+				width :150px;
+				z-index: 10
+			}
+			
+			#logo{
+				position:absolute;
+				width:auto;
+				height:auto;
+				bottom: 23px;
+    			left: 15px;
+				z-index: 11
+			}
+			
+			#mention{
+				position:absolute;
+				width:auto;
+				height:auto;
+				bottom: 2px;
+    left: 10px;
+				opacity:0;
+				z-index: 99
+			}
+			
+			#zoneAnim{
+				position:absolute;
+				width:728px;
+				height:90px;
+				top:0px;
+				left :0px;
+				overflow:hidden;
+			}
+			
+			
+			
+			
+			#compteur{
+				width:auto;
+				position:absolute;
+				top: 2px;
+ 				left: 38%;
+				transform:translateX(-50%);
+				opacity:0;
+				font-family: 'Work Sans', sans-serif;
+				font-weight:700;
+				font-size:70px;
+				text-align:center;
+				color:#fff;
+				box-sizing:border-box;
+				padding-right:15px;
+				z-index: 100
+			}
+			#pourcent{
+				width:auto;
+				position:absolute;
+				top:17px;
+				left:330px;
+				opacity:0;
+				font-family: 'Work Sans', sans-serif;
+				font-weight:700;
+				font-size:35px;
+				text-align:center;
+				color:#fff;
+				box-sizing:border-box;
+				padding-right:15px;
+				z-index: 100
+			}
+			
+			#text2_1{
+				width:auto;
+				position:absolute;
+				top:88px;
+				left:100%;
+				opacity:1;
+				font-weight:bold;
+				font-size:35px;
+				text-align:center;
+				color:#fff;
+				font-family: 'Raleway', sans-serif;
+			}
+			
+			#cta{
+				width:132px;
+				height:36px;
+				text-align:center;
+				transform:translateX(-50%) scale(1, 1);
+				position:absolute;
+				top: 26px;
+    			left: 86%;
+				opacity:0;
+				font-weight:700;
+				font-size:16px;
+				text-align:center;
+				color:#fff;
+				line-height:35px;
+				font-family: 'Raleway', sans-serif;
+			}
+			
+			#cta img {
+				width:100%;
+				height:100%;
+			}
+			
+			
+			#mentionL{
+				position : absolute;
+				top: 63px;
+    left: 265px;
+				width:100%;
+				text-align:center;
+				font-size:10px;
+				opacity:0;
+				font-family:Arial;
+				color:#fff;
+			}
+			
+			
+			#text2_1{
+				width:70px;
+				height:25px;
+				background:#4295d1;
+				position:absolute;
+				left: 49%;
+    			top: 5px;
+				opacity:0;
+				transform:translateX(-50%);
+				font-size:14px;
+				text-align:center;
+				color:#fff;
+				line-height:25px;
+				font-family: Myriad Pro, sans-serif;
+			}	
+			
+			#mask_1{
+				width:70px;
+				height:25px;
+				background:#4295d1;
+				position:absolute;
+				left:50%;
+				top:25px;
+				opacity:1;
+				transform:translateX(-50%);
+				font-size:14px;
+				text-align:center;
+				color:#fff;
+				line-height:25px;
+				font-family: Myriad Pro, sans-serif;
+			}
+			
+			
+			#text_plus{
+				width:70px;
+				height:25px;
+				background:#4295d1;
+				position:absolute;
+				left:30%;
+				top:50px;
+				opacity:0;
+				transform:translateX(-50%);
+				font-size:14px;
+				text-align:center;
+				color:#fff;
+				line-height:25px;
+				font-family: Myriad Pro, sans-serif;
+				z-index: 99
+			}
+			
+			#text2_2{
+				width:150px;
+				height:55px;
+				background:#4295d1;
+				position:absolute;
+				left: 401px;
+    			top: 30px;
+				opacity:0;
+				font-size:16px;
+				text-align:center;
+				color:#fff;
+				line-height:18px;
+				font-weight:700;
+				font-family: 'Raleway', sans-serif;
+				text-align:left;
+			}
+			
+			#text3{
+				width:100%;
+				height:auto;
+				background:#4295d1;
+				position:absolute;
+				left:50%;
+				transform:translateX(-50%);
+				top:80px;
+				opacity:0;
+				font-size:18px;
+				text-align:center;
+				color:#fff;
+				line-height:23px;
+				font-weight:700;
+				font-family: 'Raleway', sans-serif;
+			}
+			
+			
+			#trait_1{
+				width:0px;
+				height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 353px;
+    top: 18px;
+    transform: translateX(-50%);
+			}
+			
+			#trait_2{
+				width:0px;
+				height:2px;
+				background:#fff;
+				position:absolute;
+				left:50%;
+				top:115px;
+				transform:translateX(-50%);
+			}
+			#carton{
+				position: absolute;
+				top: 0px;
+				width: 100%;
+				height:90px;
+				background: transparent;
+				opacity: 1;
+				left: 50%;
+				transform:translateX(-50%) scale(1);
+
+			}
+			#cartonHaut{
+				position: absolute;
+				transform-origin:top;
+				perspective-origin:top;
+				-webkit-transform: perspective(0) rotateX(0deg);
+				transform: perspective(0) rotateX(0deg);
+				left: 199px;
+    			top: 8px;
+				width:473px;
+				height:38px;
+			}
+			#cartonBas{
+				position: absolute;
+				transform-origin:bottom;
+				perspective-origin:bottom;
+				-webkit-transform: perspective(0) rotateX(0deg);
+				transform: perspective(0) rotateX(0deg);
+				left: 199px;
+   				top: 45px;
+				width:473px;
+				height:38px;		
+			}
+			
+			#cartonGauche{
+				position: absolute;
+				transform-origin:left;
+				perspective-origin:left;
+				-webkit-transform: perspective(0) rotateY(0deg);
+				transform: perspective(0) rotateY(0deg);
+				left: 199px;
+    			top: 8px;
+				width:162px;
+				height:75px;			
+			}
+			#cartonDroit{
+				position: absolute;
+				transform-origin:right;
+				perspective-origin:right;
+				-webkit-transform: perspective(0) rotateY(0deg);
+				transform: perspective(0) rotateY(0deg);
+				right: 55px;
+    top: 8px;
+				width:160px;
+				height:75px;				
+			}
+			
+			#cartonBord{
+				position: absolute;
+				left: 60%;
+				transform:translateX(-50%) scale(1);
+				top: 0px;
+				
+			}
+			
+			
+			#cartonGauche img,
+			#cartonBord img,
+			#cartonDroit img{
+				width:100%;
+				height:100%;				
+			}
+			#template {
+				opacity: 0;
+				z-index: 100
+			}
+		</style>
+		
+		
+		<script type="text/javascript">
+			var clickTag = "https://www.google.fr";
+		</script>
+	<script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            if (features) {
+              args.push(features);
+            }
+            open.apply(window, args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script></head>
+	<body> 
+	
+		<script src="./jquery.min.js"></script>
+		<script src="./jquery.transit.js"></script>
+		<a href="javascript:window.open(window.clickTag)">
+		<div id="globalAd" class="blue"><!-- class : SP / HP -->
+			
+			
+			<div id="fond">
+				
+				<div id="compteur" style="opacity: 1; left: 37%; top: 11px;">-10</div>
+				<div id="pourcent" style="opacity: 1; left: 44%; top: 22px;">
+					<sup>%</sup>
+				</div>
+				
+				<div id="trait_1" style="width: 280px;"></div>
+				<div id="mask_1"></div>
+				<div id="text2_1" style="opacity: 1;">
+					Jusqu'à
+				</div>
+				<div id="trait_2" style="width: 280px;"></div>
+				<div id="text2_2" style="left: 360px; opacity: 1; top: 35px;">
+					sur le gaz naturel<br>
+					et l’électricité
+				</div>
+				
+				
+				<div id="text_plus">
+					<img src="./plus.png">
+				</div>
+				<div id="text3">
+					Des services pour réduire<br>
+					votre consommation
+				</div>
+				
+				
+				<div id="cta" class="pulse" style="width: 132px; height: 36px; opacity: 1; top: 21px;">
+					<img src="./cta.svg" width="100%" height="100%">
+				</div>
+				<div id="mentionL" style="opacity: 1;">
+					Voir conditions sur le site
+				</div>
+				<div id="dessous" style="transform: scale(1, 1); opacity: 0;">
+					Bienvenue chez<br> Total Direct Energie
+					<!-- <img src="dessous.png"> -->
+				</div>
+			</div>
+			
+			
+			<div id="zoneAnim">
+				<div id="carton" style="transform: translateX(-50%) scale(1.5, 1.5);">
+					<img src="./cartonHaut.png" id="cartonHaut" alt="" style="transform: perspective(200px) rotateX(-90deg);">
+					<img src="./cartonBas.png" id="cartonBas" alt="" style="transform: perspective(200px) rotateX(90deg);">
+					<img src="./cartonGauche.png" id="cartonGauche" alt="" style="transform: perspective(200px) rotateY(80deg);">
+					<img src="./cartonDroit.png" id="cartonDroit" alt="" style="transform: perspective(200px) rotateY(-80deg);">
+					<img src="./cartonBord.png" id="cartonBord" alt="">		
+				</div>
+				
+				<div id="text1" style="opacity: 0;">
+					Pour vous aussi déménager<br>
+				
+					c’est l’occasion d'économiser ?
+					
+				</div>
+				
+					
+					
+			</div>
+				
+			<div id="left"></div>
+			
+			
+			<div id="logo" style="transform: translateY(-10px) scale(1, 1);">
+				<img src="./logo_total_direct_energie.svg" width="116" height="36">
+			</div>
+			<div id="mention" style="opacity: 1;">
+					<img src="./mention.png">
+			</div>
+			<div id="template">
+				
+			</div>
+		</div>
+		</a>	
+	
+		<script>
+
+			var loop = 1;
+			var pulsation;
+			anim();
+	
+
+	
+			
+			function anim(){
+			
+				var deparAnim = 5000;
+				
+				setTimeout(function(){	
+					$("#text1").transition({opacity:0, duration: 500}, 'linear');
+				},2000);
+			
+			
+				setTimeout(function(){	
+					
+					$("#cartonHaut").transition({'-webkit-transform': 'perspective(200) rotateX(-90deg)','transform': 'perspective(200) rotateX(-90deg)', duration: 750}, 'linear');-
+					$("#cartonBas").transition({'-webkit-transform': 'perspective(200) rotateX(90deg)','transform': 'perspective(200) rotateX(90deg)', duration: 750}, 'linear');	
+				},2500);
+				
+				setTimeout(function(){	
+					$("#cartonGauche").transition({'-webkit-transform': 'perspective(200) rotateY(80deg)','transform': 'perspective(200) rotateY(80deg)', duration: 750}, 'linear');
+					$("#cartonDroit").transition({'-webkit-transform': 'perspective(200) rotateY(-80deg)','transform': 'perspective(200) rotateY(-80deg)', duration: 750}, 'linear');
+				},3000);
+				
+				
+				setTimeout(function(){	
+					$("#carton").transition({'-webkit-transform': 'translateX(-50%) scale(1.5)','transform': 'translateX(-50%) scale(1.5)', duration: 750}, 'linear');
+					$("#dessous").transition({'-webkit-transform': 'scale(1)','transform': 'scale(1)', duration: 750}, 'linear');
+				},3250);
+				
+				
+				setTimeout(function(){
+					$("#dessous").transition({opacity:0, duration: 500}, 'ease');
+					$("#compteur").transition({opacity:1, duration: 500}, 'ease');
+				},deparAnim); 
+				
+				deparAnim = deparAnim+500;
+				
+				var intervalle = 75;
+				setTimeout(function(){
+					$("#compteur").html('-01');	
+					$("#cta").transition({opacity:1, duration: 500}, 'ease');
+				},deparAnim+intervalle);	
+				setTimeout(function(){
+					$("#compteur").html('-02');	
+				},deparAnim+intervalle*2);	
+				setTimeout(function(){
+					$("#compteur").html('-03');	
+				},deparAnim+intervalle*3);	
+				setTimeout(function(){
+					$("#compteur").html('-04');	
+				},deparAnim+intervalle*4);	
+				setTimeout(function(){
+					$("#compteur").html('-05');	
+				},deparAnim+intervalle*5);
+				setTimeout(function(){
+					$("#compteur").html('-06');	
+				},deparAnim+intervalle*6);
+				setTimeout(function(){
+					$("#compteur").html('-07');	
+				},deparAnim+intervalle*7);
+				setTimeout(function(){
+					$("#compteur").html('-08');	
+				},deparAnim+intervalle*8);
+				setTimeout(function(){
+					$("#compteur").html('-09');	
+				},deparAnim+intervalle*9);
+				setTimeout(function(){
+					$("#compteur").html('-10');	
+				},deparAnim+intervalle*10);
+
+				
+				deparAnim = 5500;
+				
+				
+				setTimeout(function(){
+					$("#pourcent").transition({opacity:1,left:'44%', duration: 500}, 'ease');
+					$("#compteur").transition({opacity:1,left:'37%', duration: 500}, 'ease');
+					$("#text2_2").transition({left:360, opacity:1, duration: 500}, 'ease');
+				},deparAnim); 
+				
+				/*setTimeout(function(){
+					$("#compteur").transition({left:20, 'transform':'translateX(0)', duration: 500}, 'ease');
+				},deparAnim+150); */
+				
+				
+				/*setTimeout(function(){
+					$("#compteur").transition({top:35, duration: 500}, 'ease');
+					$("#pourcent").transition({top:23, duration: 500}, 'ease');
+					$("#text2_2").transition({top:50, duration: 500}, 'ease');
+					
+				},deparAnim+1000); */
+				
+				
+				setTimeout(function(){
+					$("#text2_1").transition({opacity:1, duration: 500}, 'ease');
+					$("#compteur").transition({top:11, duration: 500}, 'ease');
+					$("#pourcent").transition({top:22, duration: 500}, 'ease');
+					$("#text2_2").transition({top:35, duration: 500}, 'ease');
+				},deparAnim+1500); 
+				
+				setTimeout(function(){
+					$("#trait_1").transition({width:280, duration: 500}, 'ease');
+					$("#trait_2").transition({width:280, duration: 500}, 'ease');
+				},deparAnim+2000); 
+
+				/*setTimeout(function(){
+					$("#text2_1").transition({top:-100, duration: 500}, 'ease');
+					$("#trait_1").transition({top:-100, duration: 500}, 'ease');
+					$("#compteur").transition({top:-100, duration: 500}, 'ease');
+					$("#pourcent").transition({top:-100, duration: 500}, 'ease');
+					$("#text2_2").transition({top:-100, duration: 500}, 'ease');
+					
+				},deparAnim+3000); */
+
+
+		
+				setTimeout(function(){	
+					$("#logo").transition({'-webkit-transform': 'translateY(18px) scale(1)','transform': 'translateY(-10px) scale(1)', duration: 500}, 'linear');
+					$("#cta").transition({top:21, duration: 500}, 'ease');
+					$("#mentionL").transition({opacity:1, duration: 500}, 'ease');
+				
+				},deparAnim+3000); 
+					
+				setTimeout(function(){	
+					
+					$("#mention").transition({opacity:1, duration: 500}, 'linear');
+					clearInterval(pulsation);
+					pulsation = setInterval(pulsing, 810);
+				},deparAnim+3000);
+				
+				
+				
+				setTimeout(function(){	
+					$("#cta").addClass("pulse");
+				},deparAnim+3500);
+				
+	
+			
+				if(loop < 2 ){
+					
+					setTimeout(function(){
+						$("#trait_1").transition({top:-100,opacity:0, duration: 500}, 'ease');
+						$("#text2_1").transition({top:-100,opacity:0, duration: 500}, 'ease');
+						$("#text2_2").transition({top:-100,opacity:0, duration: 500}, 'ease');
+						$("#compteur").transition({top:-100,opacity:0, duration: 500}, 'ease');
+						$("#pourcent").transition({top:-100,opacity:0, duration: 500}, 'ease');
+					},deparAnim+5500); 
+					
+										
+					setTimeout(function(){
+						$("#text_plus").transition({top:30,opacity:1, duration: 500}, 'ease');
+						$("#text3").transition({top:22,opacity:1, duration: 500}, 'ease');
+					},deparAnim+5500); 
+					
+				
+					setTimeout(function(){
+						$("#compteur").html('-00');	
+						$("#globalAd").find("*").removeAttr("style");
+						loop++;
+						anim();
+					},deparAnim+7500);
+					}if(loop == 2 ){
+					setTimeout(function(){	
+						clearTime()
+						
+					},deparAnim+5500);
+				}
+				
+			}
+
+
+			function pulsing(){
+					$("#cta")
+					.transition({width:140, height:38, duration: 400})
+					.transition({width:132, height:36, duration: 400});
+			}
+			
+			function clearTime(){
+				clearInterval(pulsation);
+				console.log("fin pulse")
+			}
+
+		</script>
+	
+	
+    </body></html>

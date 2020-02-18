@@ -1,0 +1,134 @@
+.feu{
+    display: flex;
+}
+.couleur, .deux{
+ width: 200px;
+ border: 1px solid black;
+ height: 500px;
+ margin-top: 250px;
+ background-color: gray;
+ margin-left: 25px;
+
+}
+#red {
+ border: 1px solid black;
+ width: 100px;
+ height: 100px;
+ margin-top: 35px;
+ border-radius: 50%;
+ background-color: rgba(116, 80, 80, 0.952);
+ animation: animeRed 2s infinite;
+}
+#redb{
+border: 1px solid black;
+ width: 100px;
+ height: 100px;
+ margin-top: 35px;
+ border-radius: 50%;
+ background-color: rgba(116, 80, 80, 0.952);
+}
+
+#yellow{
+ border: 1px solid black;
+ width: 100px;
+ height: 100px;
+ margin-top: 35px;
+ border-radius: 50%;
+ background-color: rgb(119, 119, 83);
+}
+#yellowb{
+ border: 1px solid black;
+ width: 100px;
+ height: 100px;
+ margin-top: 35px;
+ border-radius: 50%;
+ background-color: rgb(119, 119, 83);
+}
+#green {
+border: 1px solid black;
+ width: 100px;
+ height: 100px;
+ margin-top: 35px;
+ border-radius: 50%; 
+ background-color: rgb(70, 102, 70);
+}
+#greenb{
+border: 1px solid black;
+ width: 100px;
+ height: 100px;
+ margin-top: 35px;
+ border-radius: 50%; 
+ background-color: rgb(70, 102, 70);
+}
+#red:hover{
+ background-color: rgb(255, 0, 0);
+}
+#yellow:hover{
+ background-color: rgba(255, 255, 0, 0.918);
+}
+#green:hover{
+ background-color: rgb(10, 218, 10);
+}
+#green{
+ animation: animevert 3s infinite;
+} 
+#redb:hover{
+ background-color: rgb(255, 0, 0);
+}
+#yellowb:hover{
+ background-color: rgba(255, 255, 0, 0.918);
+}
+#greenb:hover{
+ background-color: rgb(10, 218, 10);
+}
+#green{
+ animation: animevert 3s infinite;
+}
+
+/* parti animation */
+
+#red{
+    animation: animeRed 4s infinite;
+}
+
+#yellow{
+    animation: animeYellow 4s infinite;
+    animation-delay: 1s;
+}
+
+#green{
+    animation: animeGreen 4s infinite;
+    animation-delay: 2s;
+}
+
+#greenb{
+    animation: animeGreen 4s infinite;
+}
+
+#yellowb{
+    animation: animeYellow 4s infinite;
+    animation-delay: 1s;
+}
+
+#redb{
+    animation: animeRed 4s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes animeRed{
+
+
+    0%{background-color:black;}
+    33%{background-color: red};
+    100%{background-color: black};
+}
+@keyframes animeYellow{
+    0%{background-color:black;}
+    33%{background-color: orange};
+    100%{background-color: black};
+}
+@keyframes animeGreen{
+    0%{background-color:black;}
+    33%{background-color: green};
+    100%{background-color: black};
+}

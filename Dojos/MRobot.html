@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="MRobot.css">
+    <title>Dojo Robot</title>
+</head>
+<body>
+
+    <header>
+        <div class="tete">
+            <div class="yeux">
+                <div class="yeuxg"></div>
+                <div class="yeuxd"></div>
+                
+            </div><br>
+
+                
+                 <div class="bouche">
+                    <div class="boucheg"></div>
+                    <div class="bouchem"></div>
+                    <div class="bouched"></div>
+                </div> 
+        </div>
+    </header>
+    
+    
+    
+    <nav>
+        <div class="cou"></div>
+    </nav>
+    
+    <section>
+        <div class="brasg"></div>
+        <div class="ventre">
+                <a href='javascript: vaEtVient()'>Click Me</a><br>
+
+                <div style='display:none;' id='invisible'>
+                MISTER ROBOT
+                </div>
+        </div>
+        <div class="brasd"></div>
+        
+    </section>
+
+    <footer>
+        <div class=jambeg>
+            <div class="cuisseg"></div>
+            <div class="piedg"></div>
+        </div>
+
+        <div class="jambed">
+            <div class="cuissed"></div>
+            <div class ="piedd"></div>
+        </div>
+    </footer>
+
+
+    <script>
+            function vaEtVient(){
+                    if(document.getElementById('invisible').style.display == 'none'){
+                    document.getElementById('invisible').style.display = 'block';
+                      }
+                      else {
+                    document.getElementById('invisible').style.display = 'none';
+                    }
+            }
+            </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Imaginez la suite
+L'ONG pour laquelle vous avez fait cette première maquette mène des projets qu'elle cherche à faire financer par des participations en ligne. En vous basant sur le visuel de la première étape, imaginez et maquettez une  page "Projets" mettant en valeur des projets d'aide (disons au moins 2) et permettant d'accéder à un formulaire de participation et des informations comme : le coût du projet, le nombre de personnes ayant participé financièrement, sa date de mise en oeuvre.
+Créez aussi une page formulaire.
+Merci d'intégrer la navigation entre les pages dans la maquette que vous créez et les interactions qui vous paraîtront les mieux adaptées pour présenter votre travail.

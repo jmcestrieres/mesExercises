@@ -1,0 +1,201 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+    
+}
+
+header{
+    height: 150px;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    
+        
+}
+header:active {
+    background-color: gold;
+}
+
+
+
+.tete{
+    background-color: bisque;
+    width: 200px;
+    height: 150px;
+    border-radius: 40%;
+
+        
+}
+.yeux{
+    display: flex;
+    margin-top:30px;
+    justify-content: center;
+    width:100%;
+    height: 30px;
+    background-color: slategrey;
+
+}
+
+.yeuxg{
+    background-color: black;
+    border-radius: 100%;
+    width: 30px;
+    height:30px;
+    display: flex;  
+}
+.yeuxd{
+    background-color: black;
+    border-radius: 100%;
+    width: 30px;
+    height:30px;
+    display: flex;
+    margin-left: 25px;
+    border: 25px white;
+    
+}
+
+.bouche{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+        
+}
+
+.bouched{
+    background-color: black;
+    width: 1em;
+    height: 1em;
+}
+.boucheg{
+    background-color: black;
+    width: 1em;
+    height: 1em;
+}
+.bouchem{
+    background-color: pink;
+    width: 6em;
+    height: 1em;
+}
+
+
+.cou{
+    background-color: rgb(207, 186, 159);
+    width: 80px;
+    height: 25px;
+}
+
+nav{
+    background-color: skyblue;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+section{
+    background-color: skyblue;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.brasg{
+    background-color: rgb(207, 186, 159);
+    height: 350px;
+    width: 70px; 
+    margin-right: 15px;
+    animation: coucoug 2s linear infinite;
+    transform-origin: top right;
+}
+.ventre{
+    background-color: rgb(207, 186, 159);
+    height: 350px;
+    width: 250px;
+    margin-right: 15px;
+    text-align: center;
+    font-size: 3em;
+   
+}
+
+
+.brasd{
+    background-color: rgb(207, 186, 159);
+    height: 350px;
+    width: 70px;
+    animation: coucoud 2s linear infinite;
+    transform-origin: top left;
+}
+@keyframes coucoud{
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(-5deg)}
+    35% {transform: rotate(-15deg)}
+    50% {transform: rotate(-25deg)}
+    65% {transform: rotate(-35deg)}
+    75% {transform: rotate(-45deg)}
+    100% {transform: rotate(-65deg)}
+    
+    
+}
+@keyframes coucoug{
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(5deg)}
+    35% {transform: rotate(15deg)}
+    50% {transform: rotate(25deg)}
+    65% {transform: rotate(35deg)}
+    75% {transform: rotate(45deg)}
+    100% {transform: rotate(65deg)}
+    
+    
+}
+
+footer{
+    background-color: silver;
+    height: 244px;
+    justify-content: center;
+    display: flex;
+    
+    
+}
+
+.jambeg{
+    display: flex;
+    flex-direction: column;
+    height: 244px;
+
+}
+
+.cuisseg{
+    background-color: sienna;
+    height: 180px;
+    width: 110px;
+}
+.piedg{
+    background-color: sienna;
+    height: 40px;
+    width: 110px;
+    margin-top: 15px;
+    background-color: black;
+}
+
+.jambed{
+    display: flex;
+    flex-direction: column;
+    height: 244px;
+    margin-left: 15px;
+
+}
+.cuissed{
+    background-color: sienna;
+    height: 180px;
+    width: 110px;
+}
+.piedd{
+    background-color: sienna;
+    height: 40px;
+    width: 110px;
+    margin-top: 15px;
+    background-color: black;
+}

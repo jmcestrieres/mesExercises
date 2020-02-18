@@ -1,0 +1,97 @@
+body{
+    background: url("img/fond.jpg");
+    
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    
+
+}
+.tremplin{
+    width: 100px;
+    height:10px;
+    position: absolute;
+    background-color: rgba(64, 190, 5, 0.815);
+    top:621px;
+    left:950px;
+    animation: tremplin 2s infinite;
+    transform-origin: -10% -10%;
+}
+
+.perso{
+    position: absolute;
+    top: 520px;
+    left: 100px;
+    animation-name: drive2;
+    animation: drive2 2s linear infinite;
+}
+
+
+.boule{
+    position: absolute;
+    top: 520px;
+    left: 30px;
+    animation: drive 2s linear infinite;
+    
+    
+}
+.bulle p{
+    width: 300px;
+    height: 100px;
+    background-color: bisque;
+    position: absolute;
+    border: 3px orangered dotted;
+    text-align: center;
+    font-size:200%;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 3px;
+    animation: bulle 2s linear infinite;
+    top:300px;
+    left:150px;
+}
+.krilin{
+    position: absolute;
+}
+
+@keyframes drive{
+    0% {top:520px; left:30px}
+    25% {top:520px; left:90px}
+    35% {top:520px; left:180px}
+    50% {top:520px; left:500px}
+    65% {top:520px; left:800px}
+    75% {top:520px; left:1200px}
+    100% {top:520px; left:1300px}
+    
+    
+    
+}
+@keyframes drive2{
+    0% {top:520px; left:100px}
+    25% {top:520px; left:200px}
+    35% {top:520px; left:400px}
+    50% {top:520px; left:600px}
+    65% {top:520px; left:900px}
+    75% {top:250px; left:1300px}
+    100% {top:50px; left:1300px; transform: rotate(-45deg)}
+    
+}
+@keyframes tremplin{
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(0deg)}
+    35% {transform: rotate(0deg)}
+    50% {transform: rotate(-5deg)}
+    65% {transform: rotate(-10deg)}
+    75% {transform: rotate(-20deg)}
+    100% {transform: rotate(-20deg)}
+}
+
+@keyframes bulle{
+    0% {top:300px; left:100px}
+    25% {top:300px; left:200px}
+    35% {top:300px; left:400px}
+    50% {top:300px; left:600px}
+    65% {top:300px; left:750px}
+    75% {top:250px; left:850px}
+    100% {top:50px; left:850px; transform: rotate(-20deg)}
+
+}

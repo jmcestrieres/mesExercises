@@ -1,0 +1,33 @@
+body{
+    background-color: #1a0001;
+}
+
+h1,h3{
+    text-align:center;
+    color: white;
+}
+
+h3{
+    font-style: italic;
+}
+
+section{
+    height: 650px;
+    width: 1500px;
+    margin:auto;
+    background-color: white;
+    
+    font-size: 20px;
+    overflow-y: scroll;
+    grid-template-columns:repeat(2, 1fr);
+    display:grid;
+    grid-gap:10px;
+    
+    grid-auto-rows:500px;
+    
+   
+    
+}
+p{
+    break-inside: avoid-column;
+}

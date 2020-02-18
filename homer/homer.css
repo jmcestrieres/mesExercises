@@ -1,0 +1,16 @@
+body{
+    background-color: #ccba0b;
+    
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 40%;
+    transition: all .4s ease-in-out;
+}
+img:hover{
+    border-radius: 100%;
+}

@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+header{
+    height: 150px;
+    background-color: #669fee;
+        
+}
+
+nav{
+    background-color: #4a7abc;
+    height: 100px;
+    
+}
+
+section{
+    background-color: #669fee;
+    height: 446px;
+    
+}
+
+aside{
+    background-color: #4b5f7a;
+    float: right;
+    height:446px;
+    width: 250px;
+    
+    
+}
+
+footer{
+    background-color: #2d4463;
+    height: 100px;
+    
+}
